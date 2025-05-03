@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Hero = () => {
+const Home = () => {
   return (
-    <section style={styles.hero}>
+    <section id="home" style={{...styles.home, paddingTop: '150px', marginTop: '-100px'}}>
       <div style={styles.overlay}>
         <h1>Welcome,</h1>
         <p>
@@ -17,7 +17,7 @@ const Hero = () => {
 };
 
 const styles = {
-  hero: {
+  home: {
     backgroundImage: 'url("bg.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -26,14 +26,17 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    position: 'relative',
   },
   overlay: {
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    padding: '40px',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    padding: '70px',
     borderRadius: '10px',
-    maxWidth: '700px'
+    maxWidth: '700px',
+    position: 'relative',
+    top: '-40px', 
   }
 };
 
-export default Hero;
+export default Home;

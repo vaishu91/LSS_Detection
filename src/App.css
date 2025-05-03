@@ -15,15 +15,15 @@ h1, h2 {
 
 button {
   padding: 10px 20px;
-  background-color: #004aad;
-  color: white;
+  background-color: #00cccc;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #003080;
+  background-color: #00cccc;
 }
 
 @media (max-width: 768px) {
@@ -37,7 +37,7 @@ button:hover {
 }
 
 body {
-    background-image: url('/background.jpg');
+    background-image: url('/BackgroundimgMain.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

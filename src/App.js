@@ -1,17 +1,17 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Mission from './components/Mission';
-import Research from './components/Research';
+import Home from './components/Home';
+import About from './components/About';
+import Papers from './components/Papers';
 import Contact from './components/Contact';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Mission />
-      <Research />
+      <Home />
+      <About />
+      <Papers />
       <Contact />
     </div>
   );
