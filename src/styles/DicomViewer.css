@@ -1,0 +1,18 @@
+/* Basic styling for DWV viewer */
+#dwv-container {
+  position: relative;
+  background-color: #000;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+#dwv-container canvas {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+    
