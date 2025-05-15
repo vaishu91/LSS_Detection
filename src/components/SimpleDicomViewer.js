@@ -19,12 +19,20 @@ const SimpleDicomViewer = ({ file }) => {
           // Try to parse the DICOM data
           const dataSet = dicomParser.parseDicom(byteArray);
 
-          // Get some basic information
+          // 🔍 Log all readable string tags
+          console.log("DICOM Tags Present:");
+          Object.keys(dataSet.elements).forEach((tag) => {
+            try {
+              const val = dataSet.string(tag);
+              if (val) console.log(`${tag}: ${val}`);
+            } catch (e) {
+              // Ignore unreadable string values
+            }
+          });
+
+          // Get basic DICOM information
           const info = {
-            patientName: dataSet.string("x00100010") || "Unknown",
             patientId: dataSet.string("x00100020") || "Unknown",
-            studyDate: dataSet.string("x00080020") || "Unknown",
-            modality: dataSet.string("x00080060") || "Unknown",
             rows: dataSet.uint16("x00280010") || 0,
             columns: dataSet.uint16("x00280011") || 0,
           };
@@ -84,17 +92,8 @@ const SimpleDicomViewer = ({ file }) => {
           gap: "5px",
         }}
       >
-        <div>Patient Name:</div>
-        <div>{imageInfo.patientName}</div>
-
         <div>Patient ID:</div>
         <div>{imageInfo.patientId}</div>
-
-        <div>Study Date:</div>
-        <div>{imageInfo.studyDate}</div>
-
-        <div>Modality:</div>
-        <div>{imageInfo.modality}</div>
 
         <div>Image Size:</div>
         <div>
@@ -102,9 +101,6 @@ const SimpleDicomViewer = ({ file }) => {
         </div>
       </div>
 
-      <div style={{ marginTop: "15px", fontStyle: "italic", fontSize: "14px" }}>
-        Note: Full image preview is not available, only DICOM metadata is shown.
-      </div>
     </div>
   );
 };

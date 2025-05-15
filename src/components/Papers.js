@@ -15,7 +15,7 @@ const Papers = () => {
           <br />
           <strong>Dataset:</strong> RSNA 2024 Lumbar Spine Degenerative Classification
         </p>
-        <a href="#" style={styles.button}>Click here</a>
+        <a href="/research_ppr.pdf" rel="noopener noreferrer" style={styles.button}>Click here</a>
       </div>
     </section>
   );
