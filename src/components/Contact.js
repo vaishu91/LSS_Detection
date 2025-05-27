@@ -5,7 +5,7 @@ const Contact = () => {
     <section id="contact" style={styles.section}>
       <h2>Contact Us</h2>
       <p>We'd love to hear from you! Contact us on:</p>
-      <p>Email: your-email@example.com</p>
+      <p>Email: stenosisdetect@gmail.com</p>
     </section>
   );
 };
