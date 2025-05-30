@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav style={styles.nav}>
       <div style={styles.logoTitle}>
         <img src="/logo.png" alt="Logo" style={styles.logo} />
-        <h2 style={styles.title}>Stenosis Detect</h2>
+        <h2 style={styles.title}>Stenosis Detection</h2>
       </div>
       <ul style={styles.navLinks}>
         <div>

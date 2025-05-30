@@ -92,7 +92,7 @@ const Home = () => {
       style={{ ...styles.home, paddingTop: "150px", marginTop: "-100px" }}
     >
       <div style={styles.overlay}>
-        <h1>Welcome,</h1>
+        <h1>Welcome User,</h1>
         <p>
           We present you the solution for the early detection and management of
           lumbar spinal stenosis. Our innovative platform utilizes Deep Learning
