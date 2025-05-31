@@ -144,6 +144,7 @@ const PredictionResults = ({ results }) => {
                         <tr>
                           <td colSpan="5" style={{ padding: "15px 20px" }}>
                             <div style={styles.dropdownBox}>
+                              <h4 style={styles.modelTitle}>{res.modelName}</h4>
                               <table style={styles.innerTable}>
                                 <thead>
                                   <tr>
